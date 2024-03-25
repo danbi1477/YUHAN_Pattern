@@ -1,54 +1,51 @@
 #include <iostream>
 using namespace std;
 
-enum ForeColour
+enum ForeColor 
 {
-    WHITE = 1,          // 흰색
-    RED = 10,           // 빨강색
-    GREEN = 100,        // 초록색
-    YELLOW = 1000,      // 노랑
-    CYAN = 10000,       // 청록색
-    MAGENTA = 100000,   // 마젠타색
+    WHITE = 37,           // 흰색
+    RED = 31,             // 빨강색
+    GREEN = 32,           // 초록색
+    YELLOW = 33,          // 노랑
+    CYAN = 36,           // 청록색
+    MAGENTA = 35        // 마젠타색
 };
 
+void drawBlock(ForeColor color) {
+    cout << "\x1b[" << color << "m[블록]\x1b[0m " << endl;
+}
+
 int main()
-{
-
-    string name;
-    int num;
-
-    cout << "화면에 블록을 만드는 코드입니다." << endl;
-    cout << "학번 : ";
-    cin >> num;
-    cout << "이름 : ";
-    cin >> name;
+{   cout << "화면에 블록을 만드는 코드입니다." << endl;
+    cout << "학번 : 202327071" << endl;
+    cout << "이름 : 노단비" << endl;
 
     int code = 0;
 
     while (true) { 
         cout << "화면에 그릴 물체코드를 입력하세요!" << endl;
-        cout << "1000000을 입력하면 종료!" << endl;
+        cout << "64을 입력하면 종료!" << endl;
         cin >> code;
 
         if (code == 1) {
-            cout << "\x1b[37m" << "[흰]" << endl;
+            drawBlock(WHITE);
         }
-        else if (code == 10) {
-            cout << "\x1b[31m" << "[빨]" << endl;
+        else if (code == 2) {
+            drawBlock(RED);
         }
-        else if (code == 100) {
-            cout << "\x1b[32m" << "[녹]" << endl; 
+        else if (code == 4) {
+            drawBlock(GREEN);
         }
-        else if (code == 1000) {
-            cout << "\x1b[33m" << "[노]" << endl; 
+        else if (code == 8) {
+            drawBlock(YELLOW);
         }
-        else if (code == 10000) {
-            cout << "\x1b[36m" << "[청]" << endl; 
+        else if (code == 16) {
+            drawBlock(CYAN);
         }
-        else if (code == 100000) {
-            cout << "\x1b[35m" << "[마]" << endl; 
+        else if (code == 32) {
+            drawBlock(MAGENTA);
         }
-        else if (code == 1000000) {
+        else if (code == 64) {
             cout << "프로그램을 종료합니다." << endl;
             break;
         }
