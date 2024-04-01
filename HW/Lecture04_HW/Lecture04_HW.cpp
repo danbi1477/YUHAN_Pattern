@@ -24,7 +24,7 @@ int main(void)
         return -1;
     }
 
-    // 중요한 함수 : MakeContextCurrent 
+    // 중요한 함수 : MakeContextCurrent  
     glfwMakeContextCurrent(window);
 
     /* Loop until the user closes the window */
@@ -35,7 +35,8 @@ int main(void)
 
         // 스왑 버퍼?
         glfwSwapBuffers(window);
-        //뭐지 클리어만 있으면 안되는데 스왑버퍼가 있으니 됌..
+        //뭐지 클리어만 있으면 안되는데 스왑버퍼가 있으니 됌.. 테스트
+        
 
 
     }
