@@ -115,6 +115,4 @@ int main(void)
 	//GLFW 라이브러리를 종료하는 함수.
 	glfwTerminate();
 	return 0;
-
-
 }
