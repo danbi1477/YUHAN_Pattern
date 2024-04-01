@@ -1,10 +1,10 @@
 #include<iostream>
 
-//ÄÄÆÄÀÏ·¯ Áö½Ã¹®
-//Ãß°¡ Á¾¼Ó¼ºÀº ¿É¼Ç¿¡ °¡¼­ Á÷Á¢ ÁöÁ¤ÇØÁà¾ßÇÏ´Âµ¥..¹ø°Å·Î¿ì´Ï±î ÄÚµå·Î ÀÛ¼º
+//ì»´íŒŒì¼ëŸ¬ ì§€ì‹œë¬¸
+//ì¶”ê°€ ì¢…ì†ì„±ì€ ì˜µì…˜ì— ê°€ì„œ ì§ì ‘ ì§€ì •í•´ì¤˜ì•¼í•˜ëŠ”ë°..ë²ˆê±°ë¡œìš°ë‹ˆê¹Œ ì½”ë“œë¡œ ìž‘ì„±
 #pragma comment(lib, "opengl32.lib")
 
-//´©°Ù ÆÐÅ°Áö °ü¸®ÀÚ¸¦ ÅëÇØ ´Ù¿î¹ÞÀ½.
+//ëˆ„ê²Ÿ íŒ¨í‚¤ì§€ ê´€ë¦¬ìžë¥¼ í†µí•´ ë‹¤ìš´ë°›ìŒ.
 #include<GLFW/glfw3.h>
 
 
@@ -18,20 +18,20 @@ int main(void)
 {
     GLFWwindow* window;
 
-    //glfw ¶óÀÌºê·¯¸® ÃÊ±âÈ­ 
+    //glfw ë¼ì´ë¸ŒëŸ¬ë¦¬ ì´ˆê¸°í™” 
     if (!glfwInit())
         return -1;
 
-    // À©µµ¿ì Ã¢ »ý¼º? (1280, 768 Å©±â, HELLO WORLD »ý¼º)
+    // ìœˆë„ìš° ì°½ ìƒì„±? (1280, 768 í¬ê¸°, HELLO WORLD ìƒì„±)
     window = glfwCreateWindow(1280, 768, "Hello World", NULL, NULL);
-    // ¸¸¾à Ã¢À» »ý¼ºÇÏÁö ¸øÇßÀ» ¶§ ÃÊ±âÈ­
+    // ë§Œì•½ ì°½ì„ ìƒì„±í•˜ì§€ ëª»í–ˆì„ ë•Œ ì´ˆê¸°í™”
     if (!window)
     {
         glfwTerminate();
         return -1;
     }
 
-    // Áß¿äÇÑ ÇÔ¼ö : MakeContextCurrent 
+    // ì¤‘ìš”í•œ í•¨ìˆ˜ : MakeContextCurrent 
     glfwMakeContextCurrent(window);
 
 
@@ -43,15 +43,15 @@ int main(void)
     {
         glfwPollEvents();
 
-        // GL Å¬¸®¾î -> GL¿¡ µé¾î°£ ¸Þ¸ð¸®?¸¦ ÃÊ±âÈ¸(Å¬¸®¾î)½ÃÄÑÁÜ
+        // GL í´ë¦¬ì–´ -> GLì— ë“¤ì–´ê°„ ë©”ëª¨ë¦¬?ë¥¼ ì´ˆê¸°íšŒ(í´ë¦¬ì–´)ì‹œì¼œì¤Œ
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // ½º¿Ò ¹öÆÛ?
+        // ìŠ¤ì™‘ ë²„í¼?
         glfwSwapBuffers(window);
-        //¹¹Áö Å¬¸®¾î¸¸ ÀÖÀ¸¸é ¾ÈµÇ´Âµ¥ ½º¿Ò¹öÆÛ°¡ ÀÖÀ¸´Ï ‰Î..
+        //ë­ì§€ í´ë¦¬ì–´ë§Œ ìžˆìœ¼ë©´ ì•ˆë˜ëŠ”ë° ìŠ¤ì™‘ë²„í¼ê°€ ìžˆìœ¼ë‹ˆ
 
 
-        //ÀÌº¥Æ® ÁÖµµÀû ÇÁ·Î±×·¡¹Ö 
+        //ì´ë²¤íŠ¸ ì£¼ë„ì  í”„ë¡œê·¸ëž˜ë° 
 
         
 
@@ -62,4 +62,4 @@ int main(void)
     return 0;
 }
 
-//°úÁ¦ Lecture04_HW
+//ê³¼ì œ Lecture04_HW
