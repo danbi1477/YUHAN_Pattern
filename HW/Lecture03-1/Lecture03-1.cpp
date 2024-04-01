@@ -3,28 +3,28 @@ using namespace std;
 
 enum ForeColor 
 {
-    WHITE = 37,           // Èò»ö
-    RED = 31,             // »¡°­»ö
-    GREEN = 32,           // ÃÊ·Ï»ö
-    YELLOW = 33,          // ³ë¶û
-    CYAN = 36,           // Ã»·Ï»ö
-    MAGENTA = 35        // ¸¶Á¨Å¸»ö
+    WHITE = 37,           // í°ìƒ‰
+    RED = 31,             // ë¹¨ê°•ìƒ‰
+    GREEN = 32,           // ì´ˆë¡ìƒ‰
+    YELLOW = 33,          // ë…¸ë‘
+    CYAN = 36,           // ì²­ë¡ìƒ‰
+    MAGENTA = 35        // ë§ˆì  íƒ€ìƒ‰
 };
 
 void drawBlock(ForeColor color) {
-    cout << "\x1b[" << color << "m[ºí·Ï]\x1b[0m " << endl;
+    cout << "\x1b[" << color << "m[ë¸”ë¡]\x1b[0m " << endl;
 }
 
 int main()
-{   cout << "È­¸é¿¡ ºí·ÏÀ» ¸¸µå´Â ÄÚµåÀÔ´Ï´Ù." << endl;
-    cout << "ÇĞ¹ø : 202327071" << endl;
-    cout << "ÀÌ¸§ : ³ë´Üºñ" << endl;
+{   cout << "í™”ë©´ì— ë¸”ë¡ì„ ë§Œë“œëŠ” ì½”ë“œì…ë‹ˆë‹¤." << endl;
+    cout << "í•™ë²ˆ : 202327071" << endl;
+    cout << "ì´ë¦„ : ë…¸ë‹¨ë¹„" << endl;
 
     int code = 0;
 
     while (true) { 
-        cout << "È­¸é¿¡ ±×¸± ¹°Ã¼ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä!" << endl;
-        cout << "64À» ÀÔ·ÂÇÏ¸é Á¾·á!" << endl;
+        cout << "í™”ë©´ì— ê·¸ë¦´ ë¬¼ì²´ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”!" << endl;
+        cout << "64ì„ ì…ë ¥í•˜ë©´ ì¢…ë£Œ!" << endl;
         cin >> code;
 
         if (code == 1) {
@@ -46,11 +46,11 @@ int main()
             drawBlock(MAGENTA);
         }
         else if (code == 64) {
-            cout << "ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù." << endl;
+            cout << "í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤." << endl;
             break;
         }
         else {
-            cout << "À¯È¿ÇÏÁö ¾ÊÀº ¹°Ã¼ÄÚµåÀÔ´Ï´Ù." << endl;
+            cout << "ìœ íš¨í•˜ì§€ ì•Šì€ ë¬¼ì²´ì½”ë“œì…ë‹ˆë‹¤." << endl;
         }
     }
     return 0;
