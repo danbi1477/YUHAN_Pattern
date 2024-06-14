@@ -15,40 +15,6 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods
 	}
 }
 
-int render() //화면에 뭔가 그림
-{
-	//삼각형을 그림
-	glBegin(GL_TRIANGLES);
-	//흰색
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.5f, 0.3f);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(-0.5f, 0.3f);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.0f, -0.2f);
-	glEnd();
-
-	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.0f, 0.7f);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.2f, -0.1f);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(-0.4f, -0.5f);
-	glEnd();
-
-	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.0f, 0.7f);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(0.4f, -0.5f);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glVertex2f(-0.2f, -0.1f);
-	glEnd();
-
-	return 0;
-}
-
 int main(void)
 {
 	//glfw라이브러리 초기화
@@ -72,11 +38,9 @@ int main(void)
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents();
-		glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//별 그리기
-		render();
 		glfwSwapBuffers(window);
 	}
 	glfwTerminate();
